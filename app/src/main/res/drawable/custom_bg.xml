@@ -12,10 +12,10 @@
                 />
 
             <gradient
-                android:startColor="#5408EB"
-                android:endColor="#B6587D"
-                android:centerColor="#CDFBEB"
-                android:angle="9"
+                android:startColor="#101010"
+                android:endColor="#D61A65"
+                android:centerColor="#2CD0BC"
+                android:angle="30"
                 android:gradientRadius="150dp"
                 android:centerX="0.5"
                 android:centerY="0.5"
