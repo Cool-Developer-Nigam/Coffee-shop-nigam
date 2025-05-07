@@ -7,6 +7,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/custom_bg"
     tools:context=".Activity.Splash_Activity">
 
     <ImageView
@@ -22,7 +23,10 @@
 
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/splash_pic">
+        app:srcCompat="@drawable/img_2"
+
+
+        >
 
 
     </ImageView>
@@ -47,7 +51,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nigam's  Coffee is \n the Best Coffee..."
+
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -61,7 +65,7 @@
         android:id="@+id/startBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/orange"
+        android:backgroundTint="#6ADF04"
         android:ems="13"
         android:text="get   started"
         android:textAllCaps="true"
