@@ -267,14 +267,14 @@
 
                >
               <LinearLayout
-
+                  android:id="@+id/exploreBtn"
                   android:layout_width="0dp"
                   android:layout_height="match_parent"
                   android:layout_weight="0.2"
                   android:orientation="vertical"
                   >
                   <ImageView
-                      android:id="@+id/img_explore"
+
                       android:layout_marginTop="10dp"
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"
@@ -386,14 +386,14 @@
 
                </LinearLayout>
                <LinearLayout
-
+                   android:id="@+id/profileBtn"
                    android:layout_width="0dp"
                    android:layout_height="match_parent"
                    android:layout_weight="0.2"
                    android:orientation="vertical"
                    >
                    <ImageView
-                       android:id="@+id/img_profile"
+
                        android:layout_marginTop="10dp"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"

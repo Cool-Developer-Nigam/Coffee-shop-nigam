@@ -136,7 +136,7 @@
         android:layout_marginTop="18dp"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:background="@drawable/white_top_corner_bg"
+        android:background="@drawable/white_round_corner_bg"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

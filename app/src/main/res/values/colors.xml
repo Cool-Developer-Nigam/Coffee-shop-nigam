@@ -9,5 +9,8 @@
     <color name="DarkGrey">#424140</color>
     <color name="grey">#969696</color>
     <color name="DarkBrown">#3F3015</color>
+    <color name="DarkBlue">#1B35DD</color>
+    <color name="LightBlue">#7FC4E8</color>
+
 
 </resources>

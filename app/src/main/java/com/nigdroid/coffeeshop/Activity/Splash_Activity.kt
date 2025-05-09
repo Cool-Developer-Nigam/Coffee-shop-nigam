@@ -18,7 +18,9 @@ class Splash_Activity : AppCompatActivity() {
 
         val sP = getSharedPreferences("MyPref", MODE_PRIVATE)
         val editval: String = sP.getString("name", "").toString()
-
+        val editval2: String = sP.getString("phone", "").toString()
+        val editval4: String = sP.getString("email", "").toString()
+        val editval3: String = sP.getString("address", "").toString()
 
 
 
