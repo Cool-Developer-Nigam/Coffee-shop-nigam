@@ -16,6 +16,7 @@ class MainViewModel:ViewModel() {
         return repository.loadBanner()
 
     }
+
     fun loadCatagory():LiveData<MutableList<CategoryModel>>{
 
         return repository.loadCatagory()
