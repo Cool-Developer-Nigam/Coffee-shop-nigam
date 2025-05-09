@@ -37,9 +37,11 @@ class CartActivity : AppCompatActivity() {
             listView.layoutManager=LinearLayoutManager(this@CartActivity,LinearLayoutManager.VERTICAL,false)
 
             listView.adapter=CartAdapter(managmentCart.getListCart(),this@CartActivity,object : ChangeNumberItemsListener{
+
                 override fun onChanged() {
                     calculateCart()
                 }
+
             })
         }
     }

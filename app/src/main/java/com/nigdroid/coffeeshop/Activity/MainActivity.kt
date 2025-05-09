@@ -35,6 +35,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun initBottomMenu() {
 
+
+
+
+
         binding.cartBtn.setOnClickListener {
 
             startActivity(Intent(this@MainActivity,CartActivity::class.java))

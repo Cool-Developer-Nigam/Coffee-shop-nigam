@@ -4,10 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.nigdroid.coffeeshop.Activity.MainActivity
-import com.nigdroid.coffeeshop.R
 import com.nigdroid.coffeeshop.databinding.ActivitySplashBinding
 
 class Splash_Activity : AppCompatActivity() {
@@ -19,9 +15,22 @@ class Splash_Activity : AppCompatActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+        val sP = getSharedPreferences("MyPref", MODE_PRIVATE)
+        val editval: String = sP.getString("name", "").toString()
+
+
+
+
         binding.startBtn.setOnClickListener {
 
-    startActivity(Intent(this@Splash_Activity, MainActivity::class.java))
+
+    if(editval.isEmpty()){
+
+        startActivity(Intent(this@Splash_Activity, LoginActivity::class.java))
+    }else{
+        startActivity(Intent(this@Splash_Activity, MainActivity::class.java))
+    }
 
         }
     }
