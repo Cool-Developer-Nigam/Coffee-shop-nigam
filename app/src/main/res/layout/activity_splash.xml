@@ -22,7 +22,7 @@
 
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/splash_pic">
+        app:srcCompat="@drawable/img">
 
 
     </ImageView>
@@ -47,7 +47,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nigam's  Coffee is \n the Best Coffee..."
+
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"

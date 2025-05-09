@@ -46,7 +46,7 @@ class profileActivity : AppCompatActivity() {
         contact_info_text2.text ="Email : "+ email
 
         var about_me_text : TextView = findViewById(R.id.about_me_text)
-        about_me_text.text ="Address : "+ name
+        about_me_text.text ="You Name is : "+ name
 
         var achievements_placeholder : TextView = findViewById(R.id.achievements_placeholder)
         achievements_placeholder.text ="Address : "+ address
