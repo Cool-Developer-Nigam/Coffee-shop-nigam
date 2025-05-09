@@ -36,14 +36,21 @@ class MainActivity : AppCompatActivity() {
     private fun initBottomMenu() {
 
 
-
-
+        binding.exploreBtn.setOnClickListener {
+            startActivity(Intent(this@MainActivity, MainActivity::class.java))
+        }
 
         binding.cartBtn.setOnClickListener {
 
             startActivity(Intent(this@MainActivity,CartActivity::class.java))
         }
+
+        binding.profileBtn.setOnClickListener {
+            startActivity(Intent(this@MainActivity,profileActivity::class.java))
+        }
+
     }
+
 
     private fun initBanner() {
         binding.progressBar.visibility= View.VISIBLE
