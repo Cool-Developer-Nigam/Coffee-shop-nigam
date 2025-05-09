@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.nigdroid.coffeeshop.Adapter.CategoryAdapter
 import com.nigdroid.coffeeshop.Adapter.PopularAdapter
+import com.nigdroid.coffeeshop.Domain.CategoryModel
 import com.nigdroid.coffeeshop.ViewModel.MainViewModel
 import com.nigdroid.coffeeshop.databinding.ActivityMainBinding
 
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
     private fun initBanner() {
         binding.progressBar.visibility= View.VISIBLE
         viewModel.loadBanner().observeForever {
@@ -54,14 +56,34 @@ class MainActivity : AppCompatActivity() {
         viewModel.loadBanner()
     }
 
+//    private fun initCatagory() {
+//        binding.progressBar2.visibility= View.VISIBLE
+//        viewModel.loadCatagory().observeForever {
+//
+//            binding.recyclerView1.layoutManager=LinearLayoutManager(this@MainActivity,LinearLayoutManager.HORIZONTAL,false)
+//            binding.recyclerView1.adapter=CategoryAdapter(it)
+//            binding.progressBar2.visibility= View.GONE
+//
+//        }
+//        viewModel.loadCatagory()
+//    }
+    // Inside MainActivity.kt
+
     private fun initCatagory() {
-        binding.progressBar2.visibility= View.VISIBLE
+        binding.progressBar2.visibility = View.VISIBLE
         viewModel.loadCatagory().observeForever {
-
-            binding.recyclerView1.layoutManager=LinearLayoutManager(this@MainActivity,LinearLayoutManager.HORIZONTAL,false)
-            binding.recyclerView1.adapter=CategoryAdapter(it)
-            binding.progressBar2.visibility= View.GONE
-
+            binding.recyclerView1.layoutManager = LinearLayoutManager(this@MainActivity, LinearLayoutManager.HORIZONTAL, false)
+            // Pass the click listener implementation
+            binding.recyclerView1.adapter = CategoryAdapter(it, object : CategoryAdapter.OnCategoryClickListener {
+                override fun onCategoryClick(category: CategoryModel, position: Int) {
+                    // Handle the category click here
+                    // For example, start a new activity and pass the category data
+                    // val intent = Intent(this@MainActivity, CategoryItemsActivity::class.java)
+                    // intent.putExtra("category_name", category.name) // Assuming 'category' has a 'name' property
+                    // startActivity(intent)
+                }
+            })
+            binding.progressBar2.visibility = View.GONE
         }
         viewModel.loadCatagory()
     }

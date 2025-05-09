@@ -52,4 +52,6 @@ dependencies {
 
     implementation(libs.glide)
     implementation(libs.gson)
+    implementation(libs.lifecycle.viewmodel.ktx) // Use the latest stable version
+
 }

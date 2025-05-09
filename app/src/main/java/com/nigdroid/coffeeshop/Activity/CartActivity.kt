@@ -46,7 +46,6 @@ class CartActivity : AppCompatActivity() {
 
     private fun setVariable() {
         binding.backBtn.setOnClickListener {
-
             finish()
         }
     }

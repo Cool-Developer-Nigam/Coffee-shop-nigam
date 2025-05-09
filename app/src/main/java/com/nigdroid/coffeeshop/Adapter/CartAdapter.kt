@@ -12,6 +12,9 @@ import com.nigdroid.coffeeshop.Domain.ItemsModel
 import com.nigdroid.coffeeshop.databinding.ViewholderCartBinding
 import com.uilover.project195.Helper.ChangeNumberItemsListener
 
+// Inside CategoryAdapter.kt
+
+
 class CartAdapter(
     private val listItemSelected:ArrayList<ItemsModel>,
     context: Context,
