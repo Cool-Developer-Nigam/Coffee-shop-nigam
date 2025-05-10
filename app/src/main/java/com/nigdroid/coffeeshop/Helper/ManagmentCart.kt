@@ -18,11 +18,13 @@ class ManagmentCart(val context: Context) {
 
         if (existAlready) {
             listItem[index].numberInCart = item.numberInCart
+            Toast.makeText(context, "Already in your Cart", Toast.LENGTH_SHORT).show()
         } else {
             listItem.add(item)
+            Toast.makeText(context, "Added to your Cart", Toast.LENGTH_SHORT).show()
         }
         tinyDB.putListObject("CartList", listItem)
-        Toast.makeText(context, "Added to your Cart", Toast.LENGTH_SHORT).show()
+
     }
 
     fun getListCart(): ArrayList<ItemsModel> {

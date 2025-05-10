@@ -3,14 +3,14 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="orange">#F69F0B</color>
-    <color name="cream">#E0BA77</color>
-    <color name="lightcream">#DDD0B9</color>
-    <color name="DarkGrey">#424140</color>
-    <color name="grey">#969696</color>
-    <color name="DarkBrown">#3F3015</color>
-    <color name="DarkBlue">#1B35DD</color>
-    <color name="LightBlue">#7FC4E8</color>
+    <color name="orange">#F57C00</color>
+    <color name="cream">#E0B870</color>
+    <color name="lightcream">#BFAB89</color>
+    <color name="DarkGrey">#494747</color>
+    <color name="grey">#938A8A</color>
+    <color name="DarkBrown">#5C431C</color>
+    <color name="DarkBlue">#344BE5</color>
+    <color name="LightBlue">#79C6EE</color>
 
 
 </resources>

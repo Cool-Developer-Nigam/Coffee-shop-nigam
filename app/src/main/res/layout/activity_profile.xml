@@ -7,20 +7,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.profileActivity"
-    android:background="@color/material_dynamic_neutral95">
+    android:background="@color/lightcream">
 
 
-    <ImageView
-       android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/login_2"
-      />
+
 
 
 
@@ -44,7 +34,7 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            app:layout_constraintStart_toStartOf="parent"
-           android:background="@drawable/brown_full_corner_bg"
+           android:background="@color/cream"
            app:layout_constraintTop_toTopOf="parent">
 
            <ImageView
@@ -52,9 +42,9 @@
 
                android:layout_width="22dp"
                android:layout_height="22dp"
-               android:src="@drawable/outline_arrow_back_ios_new_24"
+               android:src="@drawable/back"
              android:layout_marginStart="5dp"
-
+               app:tint="@color/DarkBrown"
                android:clickable="true"
                android:focusable="true"/>
            <TextView
@@ -62,7 +52,7 @@
                android:layout_height="wrap_content"
                android:text="Back"
                android:textStyle="bold"
-               android:textColor="@color/white"
+               android:textColor="@color/DarkBrown"
                android:layout_marginEnd="8dp"
 
 
@@ -81,7 +71,7 @@
             android:layout_height="100dp"
             android:src="@drawable/outline_account_circle_24"
             android:layout_margin="16dp"
-
+            app:tint="@color/DarkBrown"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/img_back"
         android:layout_marginTop="16dp"
@@ -94,7 +84,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="User Name"
-            android:textColor="@android:color/black"
+            android:textColor="@color/DarkBrown"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/profile_picture"
@@ -109,7 +99,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
             android:text="user.email@example.com"
-            android:textColor="@android:color/black"
+            android:textColor="@color/DarkBrown"
             android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/profile_picture"
             app:layout_constraintTop_toBottomOf="@+id/username_text"
@@ -141,7 +131,7 @@
 
       <TextView
           android:layout_marginStart="10dp"
-          android:textColor="@android:color/black"
+          android:textColor="@color/DarkBrown"
           android:id="@+id/edit_profile_button"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -176,7 +166,7 @@
 
             <TextView
                 android:layout_marginTop="16dp"
-                android:textColor="@android:color/black"
+                android:textColor="@color/DarkBrown"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="About Me(Name)"
@@ -186,7 +176,7 @@
 
             <TextView
                 android:layout_marginTop="6dp"
-                android:textColor="@android:color/black"
+                android:textColor="@color/DarkBrown"
                 android:id="@+id/about_me_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -195,10 +185,10 @@
 
                 android:layout_marginBottom="8dp" />
 
-            <!-- Placeholder Section: Contact Info -->
+
             <TextView
                 android:layout_marginTop="10dp"
-                android:textColor="@android:color/black"
+                android:textColor="@color/DarkBrown"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Contact Information"
@@ -208,7 +198,7 @@
 
             <TextView
                 android:layout_marginTop="6dp"
-                android:textColor="@android:color/black"
+                android:textColor="@color/DarkBrown"
                 android:id="@+id/contact_info_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -218,7 +208,7 @@
                />
             <TextView
                 android:layout_marginTop="6dp"
-                android:textColor="@android:color/black"
+                android:textColor="@color/DarkBrown"
                 android:id="@+id/contact_info_text2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -230,7 +220,7 @@
             <!-- Placeholder Section: Achievements / Badges -->
             <TextView
                 android:layout_marginTop="10dp"
-                android:textColor="@android:color/black"
+                android:textColor="@color/DarkBrown"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
@@ -241,7 +231,7 @@
             <!-- You might use a RecyclerView here for a list of achievements -->
             <TextView
                 android:layout_marginTop="6dp"
-                android:textColor="@android:color/black"
+                android:textColor="@color/DarkBrown"
                 android:id="@+id/achievements_placeholder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -253,7 +243,7 @@
             <!-- Placeholder Section: Activity Feed / Recent Orders -->
             <TextView
                 android:layout_marginTop="10dp"
-                android:textColor="@android:color/black"
+                android:textColor="@color/DarkBrown"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
@@ -264,7 +254,7 @@
             <!-- You might use a RecyclerView here for a list of recent activities/orders -->
             <TextView
                 android:layout_marginTop="6dp"
-                android:textColor="@android:color/black"
+                android:textColor="@color/DarkBrown"
                 android:id="@+id/recent_activity_placeholder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -276,22 +266,22 @@
             <!-- Placeholder Section: Settings -->
             <TextView
                 android:layout_marginTop="10dp"
-                android:textColor="@android:color/black"
+                android:textColor="@color/DarkBrown"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Favoutites"
+                android:text="Favourites"
                 style="@style/ProfileSectionHeader" />
 
             <TextView
                 android:layout_marginTop="6dp"
-                android:id="@+id/Favourites_link"
+                android:id="@+id/fav_link"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Click here to go to Favourites"
                 android:textSize="16sp"
-                android:textColor="@android:color/holo_blue_dark"
+                android:textColor="@color/DarkBlue"
                 android:textStyle="italic"
                 android:clickable="true"
                 android:focusable="true"
@@ -305,9 +295,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="32dp"
-
+                android:textColor="@color/black"
                 android:layout_marginBottom="16dp"
-                android:backgroundTint="#F90468"
+                android:backgroundTint="#F57C00"
                 android:text="logout" />
 
 
