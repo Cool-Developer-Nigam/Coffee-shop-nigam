@@ -166,15 +166,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:padding="16dp"
 
 
-            android:padding="20dp">
+           >
 
 
 
 
             <TextView
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="16dp"
                 android:textColor="@android:color/black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -184,7 +185,7 @@
                 />
 
             <TextView
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="6dp"
                 android:textColor="@android:color/black"
                 android:id="@+id/about_me_text"
                 android:layout_width="match_parent"
@@ -196,7 +197,7 @@
 
             <!-- Placeholder Section: Contact Info -->
             <TextView
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:textColor="@android:color/black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -206,7 +207,7 @@
                />
 
             <TextView
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="6dp"
                 android:textColor="@android:color/black"
                 android:id="@+id/contact_info_text"
                 android:layout_width="match_parent"
@@ -214,9 +215,9 @@
                 android:text="Email: user.email@example.com"
                 android:textSize="16sp"
 
-                android:layout_marginBottom="8dp" />
+               />
             <TextView
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="6dp"
                 android:textColor="@android:color/black"
                 android:id="@+id/contact_info_text2"
                 android:layout_width="match_parent"
@@ -224,11 +225,11 @@
                 android:text="Email: user.email@example.com"
                 android:textSize="16sp"
 
-                android:layout_marginBottom="8dp" />
+               />
 
             <!-- Placeholder Section: Achievements / Badges -->
             <TextView
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -239,7 +240,7 @@
 
             <!-- You might use a RecyclerView here for a list of achievements -->
             <TextView
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="6dp"
                 android:textColor="@android:color/black"
                 android:id="@+id/achievements_placeholder"
                 android:layout_width="match_parent"
@@ -251,7 +252,7 @@
 
             <!-- Placeholder Section: Activity Feed / Recent Orders -->
             <TextView
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -262,7 +263,7 @@
 
             <!-- You might use a RecyclerView here for a list of recent activities/orders -->
             <TextView
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="6dp"
                 android:textColor="@android:color/black"
                 android:id="@+id/recent_activity_placeholder"
                 android:layout_width="match_parent"
@@ -270,25 +271,25 @@
                 android:text="Placeholder for a list of recent user activity or past orders."
                 android:textSize="16sp"
 
-                android:layout_marginBottom="8dp" />
+               />
 
             <!-- Placeholder Section: Settings -->
             <TextView
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Settings"
+                android:text="Favoutites"
                 style="@style/ProfileSectionHeader" />
 
             <TextView
-                android:layout_marginTop="10dp"
-                android:id="@+id/settings_link"
+                android:layout_marginTop="6dp"
+                android:id="@+id/Favourites_link"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Manage your account settings"
+                android:text="Click here to go to Favourites"
                 android:textSize="16sp"
                 android:textColor="@android:color/holo_blue_dark"
                 android:textStyle="italic"
