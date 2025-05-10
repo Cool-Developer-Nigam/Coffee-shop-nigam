@@ -1,9 +1,12 @@
 package com.nigdroid.coffeeshop.Activity
 
 import android.content.Intent
+import android.content.res.ColorStateList
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
@@ -34,6 +37,8 @@ class DetailActivity : AppCompatActivity() {
         initSizeList()
 
     }
+
+
 
     private fun initSizeList() {
         binding.apply {
@@ -97,9 +102,18 @@ class DetailActivity : AppCompatActivity() {
                 }
             }
 
+          var img_fav: ImageView = findViewById(R.id.img_fav)
             favBtn.setOnClickListener {
                 managementFavourite.insertItem(item) // Add the current item to favorites
                 // The Toast message is shown inside ManagementFavourite.insertItem()
+
+
+                val colorStateList = ColorStateList.valueOf(ContextCompat.getColor(this@DetailActivity, R.color.white))
+              
+
+                img_fav.imageTintList = colorStateList
+
+
             }
 
 

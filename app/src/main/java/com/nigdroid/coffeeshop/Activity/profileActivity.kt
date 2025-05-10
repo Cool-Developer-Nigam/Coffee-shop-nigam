@@ -9,6 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.nigdroid.coffeeshop.Activity.FavouriteActivity
 import com.nigdroid.coffeeshop.Activity.LoginActivity
 import com.nigdroid.coffeeshop.R
 import com.nigdroid.coffeeshop.databinding.ActivityProfileBinding
@@ -67,11 +68,24 @@ class profileActivity : AppCompatActivity() {
 
         }
 
+        var fav_link : TextView = findViewById(R.id.fav_link)
+        fav_link.setOnClickListener {
+
+            startActivity(Intent(this@profileActivity, FavouriteActivity::class.java))
+
+
+            Toast.makeText(this@profileActivity,"You have entered to Favourites",Toast.LENGTH_SHORT).show()
+        }
+
         var img_back : LinearLayout = findViewById(R.id.img_back)
 
         img_back.setOnClickListener {
             finish()
         }
+
+
+
+
 
     }
 }

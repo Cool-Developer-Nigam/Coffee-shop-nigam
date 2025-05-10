@@ -7,30 +7,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.FavouriteActivity"
-    android:background="@color/white"> <!-- Or your preferred background -->
+    android:background="@color/lightcream"> <!-- Or your preferred background -->
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="56dp"
         android:text="My Favourite Items"
-        android:textColor="@color/black"
+        android:textColor="@color/DarkBrown"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.594"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <LinearLayout
         android:id="@+id/backBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView5"
-        app:srcCompat="@drawable/back" /> <!-- Use your back arrow drawable -->
+
+        android:padding="6dp"
+
+        >
+        <ImageView
+
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            app:tint="@color/DarkBrown"
+            app:srcCompat="@drawable/back" />
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/DarkBrown"
+            android:layout_marginEnd="6dp"
+
+
+            />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/favouriteListView"
@@ -47,6 +72,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Your favourite list is empty"
+        android:textColor="@color/DarkBrown"
         android:textSize="18sp"
         android:textStyle="bold"
         android:visibility="gone"

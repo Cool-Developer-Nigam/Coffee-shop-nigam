@@ -6,18 +6,22 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.nigdroid.coffeeshop.Domain.ItemsModel
-import com.nigdroid.coffeeshop.Helper.ManagementFavourite // Keep if needed for removal
-import com.nigdroid.coffeeshop.databinding.ViewholderFavouriteBinding // You'll need a layout for each favourite item
+import com.nigdroid.coffeeshop.Helper.ManagementFavourite // Import ManagementFavourite
+import com.nigdroid.coffeeshop.databinding.ViewholderFavouriteBinding
+
+// Define an interface for the listener
+interface ChangeNumberItemsListener {
+    fun onChanged()
+}
 
 class FavouriteAdapter(
     private val favouriteItems: ArrayList<ItemsModel>,
-    private val context: Context
-    // You could add a listener here for removing items from the favourite list
-    // private val changeNumberItemsListener: ChangeNumberItemsListener? = null
+    private val context: Context,
+    private val changeNumberItemsListener: ChangeNumberItemsListener? = null // Make listener nullable
 ) : RecyclerView.Adapter<FavouriteAdapter.ViewHolder>() {
 
-    // You'll likely need a ManagementFavourite instance if you allow removal from the list
-    // private val managementFavourite = ManagementFavourite(context)
+    // Instantiate ManagementFavourite
+    private val managementFavourite = ManagementFavourite(context)
 
     class ViewHolder(val binding: ViewholderFavouriteBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -31,21 +35,37 @@ class FavouriteAdapter(
 
         holder.binding.apply {
             titleTxt.text = item.title
-            priceTxt.text = "$${item.price}"
+            priceTxt.text = "$${item.price}" // Format the price
 
             // Load the item image (assuming picUrl is a list and you want the first one)
-            Glide.with(holder.itemView.context)
-                .load(item.picUrl[0])
-                .into(pic)
+            if (item.picUrl.isNotEmpty()) {
+                Glide.with(holder.itemView.context)
+                    .load(item.picUrl[0])
+                    .into(pic)
+            } else {
+                // Set a placeholder image or hide the ImageView if no image is available
+                // pic.setImageResource(R.drawable.placeholder_image)
+            }
 
-            // Optional: Handle removing from favourites
-            // deleteBtn.setOnClickListener {
-            //    managementFavourite.removeItem(item)
-            //    favouriteItems.removeAt(position)
-            //    notifyItemRemoved(position)
-            //    notifyItemRangeChanged(position, favouriteItems.size)
-            //    changeNumberItemsListener?.onChanged() // Notify if listener is provided
-            // }
+
+            // Handle removing from favourites when deleteBtn is clicked
+            // Make sure the ID in your viewholder_favourite.xml is 'deleteBtn'
+            deleteBtn.setOnClickListener {
+                // Call the removeItem method from ManagementFavourite
+                managementFavourite.removeItem(item)
+
+                // Remove the item from the adapter's data source
+                favouriteItems.removeAt(position)
+
+                // Notify the adapter about the item removal
+                notifyItemRemoved(position)
+
+                // Notify that the range of items has changed, which is important for proper list updates
+                notifyItemRangeChanged(position, favouriteItems.size)
+
+                // Notify the listener (FavouriteActivity) that the list has changed
+                changeNumberItemsListener?.onChanged()
+            }
         }
     }
 

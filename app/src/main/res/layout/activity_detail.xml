@@ -51,20 +51,38 @@
                     app:layout_constraintVertical_bias="0.0"
                     tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
-                <ImageView
-                    android:id="@+id/favBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.933"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/picMain"
-                    app:layout_constraintVertical_bias="0.25"
+              <LinearLayout
+                  android:id="@+id/favBtn"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintHorizontal_bias="0.933"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="@+id/picMain"
+                  app:layout_constraintVertical_bias="0.25"
+                    android:background="@drawable/round_brown_bg"
+                  android:padding="3dp"
 
-                    app:srcCompat="@drawable/btn_3"
-                    app:tint="@color/white"
-                    />
+
+                  >
+                  <ImageView
+
+                      android:id="@+id/img_fav"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+
+                      app:srcCompat="@drawable/btn_3"
+                      app:tint="@color/white"
+                      />
+
+
+
+
+
+
+              </LinearLayout>
 
 
                 <LinearLayout
@@ -73,8 +91,10 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     app:flow_verticalBias="0.1"
-                    android:background="@color/DarkBrown"
-                    style="@style/ciclular"
+                    android:background="@drawable/round_brown_bg"
+
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.1"
