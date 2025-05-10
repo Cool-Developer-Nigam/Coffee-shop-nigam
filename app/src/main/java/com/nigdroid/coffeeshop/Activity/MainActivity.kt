@@ -5,11 +5,14 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.core.text.color
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.nigdroid.coffeeshop.Adapter.CategoryAdapter
 import com.nigdroid.coffeeshop.Adapter.PopularAdapter
+import com.nigdroid.coffeeshop.R
 import com.nigdroid.coffeeshop.ViewModel.MainViewModel
 import com.nigdroid.coffeeshop.databinding.ActivityMainBinding
 
@@ -38,15 +41,24 @@ class MainActivity : AppCompatActivity() {
 
         binding.exploreBtn.setOnClickListener {
             startActivity(Intent(this@MainActivity, MainActivity::class.java))
+
+
         }
 
         binding.cartBtn.setOnClickListener {
 
             startActivity(Intent(this@MainActivity,CartActivity::class.java))
+            binding.imgCart.setColorFilter(ContextCompat.getColor(this, R.color.white), android.graphics.PorterDuff.Mode.SRC_IN)
         }
 
         binding.profileBtn.setOnClickListener {
             startActivity(Intent(this@MainActivity,profileActivity::class.java))
+        }
+
+        binding.favouriteBtn.setOnClickListener {
+
+            startActivity(Intent(this@MainActivity,FavouriteActivity::class.java))
+
         }
 
     }
